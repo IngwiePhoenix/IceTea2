@@ -1,0 +1,18 @@
+[submodule "deps/slre"]
+	path = deps/slre
+	url = https://github.com/cesanta/slre.git
+[submodule "deps/rlutil"]
+	path = deps/rlutil
+	url = https://github.com/tapio/rlutil.git
+[submodule "deps/ttvfs"]
+	path = deps/ttvfs
+	url = https://github.com/fgenesis/ttvfs.git
+[submodule "deps/stlplus"]
+	path = deps/stlplus
+	url = https://github.com/daleydeng/stlplus3.git
+[submodule "deps/minihttp"]
+	path = deps/minihttp
+	url = https://github.com/fgenesis/minihttp.git
+[submodule "deps/mbedtls"]
+	path = deps/mbedtls
+	url = https://github.com/ARMmbed/mbedtls.git
