@@ -16,3 +16,15 @@
 [submodule "deps/mbedtls"]
 	path = deps/mbedtls
 	url = https://github.com/ARMmbed/mbedtls.git
+[submodule "deps/cdetect"]
+	path = deps/cdetect
+	url = https://github.com/IngwiePhoenix/cDetect.git
+[submodule "deps/wren"]
+	path = deps/wren
+	url = https://github.com/munificent/wren.git
+[submodule "deps/semver.c"]
+	path = deps/semver.c
+	url = https://github.com/h2non/semver.c
+[submodule "deps/SQLiteCpp"]
+	path = deps/SQLiteCpp
+	url = https://github.com/SRombauts/SQLiteCpp.git
