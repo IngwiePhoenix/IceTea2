@@ -16,10 +16,12 @@
 #define CDETECT_CHOST_FILE "deps/cdetect/cdetect/chost.c"
 #include <cdetect/cdetect.c>
 
-// Post-defining some funcs that cDetect doesnt have - oddly...
+/**
+ * Post-defining some funcs that cDetect doesnt have - oddly...
+ */
 int config_execute_source_rt(
-  char* src, char* cflags, char* args,
-  cdetect_string_t &result
+  char* source, char* cflags, char* args,
+  cdetect_string_t* result
 ) {
   cdetect_bool_t success;
   cdetect_string_t sourcecode;
@@ -44,7 +46,7 @@ int config_execute_source_rt(
     result
   );
 
-  cdetect_string_destroy(result);
+  cdetect_string_destroy(*result);
   cdetect_string_destroy(arguments);
   cdetect_string_destroy(link_flags);
   cdetect_string_destroy(compile_flags);
@@ -78,12 +80,13 @@ cdetect_bool_t configure_sharedlibpp() {
     cdetect_bool_t __result = CDETECT_TRUE; \
     char* __message = NULL; \
     _try; \
-    if(__result = CDETECT_FALSE) { \
+    if(__result == CDETECT_FALSE) { \
       _catch; \
-      if(__message!=NULL) printf("[%s:%s] %s\n", __FILE__, __LINE__, __message); \
+      if(__message!=NULL) printf("[%s:%i] %s\n", __FILE__, __LINE__, __message); \
       config_abort(); \
     } \
   }
+#define try(_try) try_catch(_try, {})
 
 /**
  * Sets `__result` to FALSE and `__message` to the given string, effectively
@@ -112,6 +115,11 @@ cdetect_bool_t configure_sharedlibpp() {
    * compile_cxx(char*[] infiles, char* outfile, char* cflags, char* ldflags)
 */
 
+const char* sources[] = {
+  "src/main.cpp",
+  NULL
+};
+
 int main(int argc, char** argv) {
   //config_copyright_notice();
   config_begin();
@@ -121,7 +129,9 @@ int main(int argc, char** argv) {
     config_compiler_check();
 
     try_catch({
-      // ...
+      for(int i=0; sources[i]!=NULL; i++) {
+        printf("File: %s\n", sources[i]);
+      }
     }, {});
   }
 
