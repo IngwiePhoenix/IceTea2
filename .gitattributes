@@ -1,0 +1,12 @@
+# Original Gravity extensions
+*.gravity linguist-language=swift
+*.gravity linguist-vendored
+
+# Shortened .g extension
+*.g linguist-language=swift
+*.g linguist-vendored
+
+# IceTea uses Gravity, so link that one too.
+*.it linguist-language=swift
+*.it linguist-vendored
+
