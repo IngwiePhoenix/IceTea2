@@ -3,3 +3,4 @@ cachect.txt
 config.h
 *.obj
 *.exe
+out/

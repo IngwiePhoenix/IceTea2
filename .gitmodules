@@ -19,9 +19,6 @@
 [submodule "deps/cdetect"]
 	path = deps/cdetect
 	url = https://github.com/IngwiePhoenix/cDetect.git
-[submodule "deps/wren"]
-	path = deps/wren
-	url = https://github.com/munificent/wren.git
 [submodule "deps/semver.c"]
 	path = deps/semver.c
 	url = https://github.com/h2non/semver.c
@@ -31,3 +28,6 @@
 [submodule "deps/libdylib"]
 	path = deps/libdylib
 	url = https://github.com/lethosor/libdylib.git
+[submodule "deps/gravity"]
+	path = deps/gravity
+	url = https://github.com/marcobambini/gravity.git
