@@ -1,0 +1,15 @@
+[submodule "third_party/mjs"]
+	path = third_party/mjs
+	url = https://github.com/cesanta/mjs.git
+[submodule "third_party/jerryscript"]
+	path = third_party/jerryscript
+	url = https://github.com/pando-project/jerryscript.git
+[submodule "third_party/cpu_features"]
+	path = third_party/cpu_features
+	url = https://github.com/google/cpu_features.git
+[submodule "third_party/dyncall"]
+	path = third_party/dyncall
+	url = https://github.com/zhuomingliang/dyncall.git
+[submodule "third_party/minizip"]
+	path = third_party/minizip
+	url = https://github.com/nmoinvaz/minizip.git
